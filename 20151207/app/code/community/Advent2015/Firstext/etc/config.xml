@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Advent2015_Fristext>
+            <version>0.0.1</version>
+        </Advent2015_Fristext>
+    </modules>
+    <global>
+        <helpers>
+            <advent2015_fristext>
+                <class>Advent2015_Firstext_Helper</class>
+            </advent2015_fristext>
+        </helpers>
+    </global>
+</config>
