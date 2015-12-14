@@ -6,6 +6,14 @@
         </Advent2015_Secondext>
     </modules>
     <global>
+        <!-- 「一般的なやり方」で必要な部分↓ -->
+        <blocks>
+            <Advent2015_Secondext>
+                <class>Advent2015_Secondext_Block</class>
+            </Advent2015_Secondext>
+        </blocks>
+        <!-- 「一般的なやり方」で必要な部分↑ -->
+
         <helpers>
             <Advent2015_Secondext>
                 <class>Advent2015_Secondext_Helper</class>
@@ -14,8 +22,18 @@
     </global>
 
     <frontend>
+        <!-- 「一般的なやり方」で必要な部分↓ -->
+        <layout>
+            <updates>
+                <secondext>
+                    <file>second_ext.xml</file>
+                </secondext>
+            </updates>
+        </layout>
+        <!-- 「一般的なやり方」で必要な部分↑ -->
+
         <routers>
-            <!-- ↓「簡単なやり方」で必要な部分↓ -->
+            <!-- ↓「簡単なやり方」と「一般的なやり方」で必要な部分↓ -->
             <secondext>
                 <use>standard</use>
                 <args>
@@ -23,7 +41,7 @@
                     <frontName>ext-test</frontName>
                 </args>
             </secondext>
-            <!-- ↑「簡単なやり方」で必要な部分↑ -->
+            <!-- ↑「簡単なやり方」と「一般的なやり方」で必要な部分↑ -->
         </routers>
     </frontend>
 </config>

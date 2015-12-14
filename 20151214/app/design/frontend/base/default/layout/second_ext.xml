@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout version="0.0.1">
+    <secondext_index_form translate="label">
+        <label>Test Form</label>
+
+        <!-- HTMLの<head>部分に対する定義 -->
+        <reference name="head">
+            <!-- 
+                「module」で指定しているのは利用するHelperの名前。
+                （Helperがロケール文字列の変換を担当しているため。
+                　Helperが指定されていないと、どの辞書データを使ってタイトルなどの文字列をロケールごとに
+                　変換するのか、Magentoが分からなくなる）
+                　そのため、中身はなくてもHelperクラスを作っておかないと描画が出来ず、エラーになる。
+            -->
+            <action method="setTitle" translate="title" module="Advent2015_Secondext"><title>Test Form</title></action>
+        </reference>
+
+        <!-- 全体の画面レイアウトに関する定義 -->
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setHeaderTitle" translate="title" module="Advent2015_Secondext"><title>Test Form</title></action>
+        </reference>
+
+        <!-- 表示するコンテンツに関する定義 -->
+        <reference name="content">
+            <block type="Advent2015_Secondext/ExtForm" template="secondext/ext_form.phtml"/>
+        </reference>
+    </secondext_index_form>
+</layout>

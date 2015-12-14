@@ -1,5 +1,10 @@
 <?php
 class Advent2015_Secondext_IndexController extends Mage_Core_Controller_Front_Action {
+    
+	/*
+	「/ext-test」もしくは「/ext-test/index」にアクセスした場合に呼ばれる。
+	　「簡単なやり方」のルーティング
+	*/
     public function indexAction() {
         $this->loadLayout();
 
@@ -15,4 +20,14 @@ class Advent2015_Secondext_IndexController extends Mage_Core_Controller_Front_Ac
         $this->_initLayoutMessages('core/session');
         $this->renderLayout();
     }
+
+    /*
+    「/ext-test/index/form」にアクセスした場合に呼ばれる。
+    　「一般的なやり方」のルーティング
+    */
+    public function formAction() {
+        $this->loadLayout();
+        $this->renderLayout();
+    }
+
 }
