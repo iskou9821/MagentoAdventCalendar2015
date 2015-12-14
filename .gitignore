@@ -1,4 +1,4 @@
-gnore vagrant
+Ignore vagrant
 vagrant/
 
 # Ignore bundler config.

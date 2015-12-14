@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Advent2015_Secondext>
+            <version>0.0.1</version>
+        </Advent2015_Secondext>
+    </modules>
+    <global>
+        <helpers>
+            <Advent2015_Secondext>
+                <class>Advent2015_Secondext_Helper</class>
+            </Advent2015_Secondext>
+        </helpers>
+    </global>
+
+    <frontend>
+        <routers>
+            <!-- ↓「簡単なやり方」で必要な部分↓ -->
+            <secondext>
+                <use>standard</use>
+                <args>
+                    <module>Advent2015_Secondext</module>
+                    <frontName>ext-test</frontName>
+                </args>
+            </secondext>
+            <!-- ↑「簡単なやり方」で必要な部分↑ -->
+        </routers>
+    </frontend>
+</config>
