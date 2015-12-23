@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Advent2015_Thirdext>
+            <version>0.0.1</version>
+        </Advent2015_Thirdext>
+    </modules>
+    
+    <global>
+        <!-- ブロック(Viewに対応するクラス)定義 -->
+        <blocks>
+            <Advent2015_Thirdext>
+                <class>Advent2015_Thirdext_Block</class>
+            </Advent2015_Thirdext>
+        </blocks>
+        
+        <!-- Helperの定義 -->
+        <helpers>
+            <Advent2015_Thirdext>
+                <class>Advent2015_Thirdext_Helper</class>
+            </Advent2015_Thirdext>
+        </helpers>
+        
+        <!--  モデルの定義 -->
+        <models>
+            <!--  モデルのクラス名のプレフィクスなどに関する定義 -->
+            <Advent2015_Thirdext>
+                <class>Advent2015_Thirdext_Model</class>
+                <resourceModel>Advent2015_Thirdext_resource</resourceModel>
+            </Advent2015_Thirdext>
+
+            <!--  データベースに関わる定義 -->
+            <Advent2015_Thirdext_resource>
+                <class>Advent2015_Thirdext_Model_Resource</class>
+                <deprecatedNode>thirdext_mysql4</deprecatedNode>
+                <entities>
+                    <extSampleModel>
+                        <table>advent2015_ext_sample</table>
+                    </extSampleModel>
+                </entities>
+            </Advent2015_Thirdext_resource>
+        </models>
+        
+        <!--セットアップ(テーブル作成のSQL実行など)に関わる定義 -->
+        <resources>
+            <thirdext_setup>
+                <setup>
+                    <module>Advent2015_Thirdext</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </thirdext_setup>
+        </resources>
+    </global>
+    
+    <!-- ルーティングに関わる定義 -->
+    <frontend>
+        <layout>
+            <updates>
+                <thirdext>
+                    <file>third_ext.xml</file>
+                </thirdext>
+            </updates>
+        </layout>
+        <routers>
+            <thirdext>
+                <use>standard</use>
+                <args>
+                    <module>Advent2015_Thirdext</module>
+                    <frontName>ext-db-test</frontName>
+                </args>
+            </thirdext>
+        </routers>
+    </frontend>
+</config>

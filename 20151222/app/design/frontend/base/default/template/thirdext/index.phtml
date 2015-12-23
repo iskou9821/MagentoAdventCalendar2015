@@ -1,0 +1,56 @@
+<?php
+    $models = $this->getSampleModels();
+?>
+
+<style type="text/css">
+    table.list, table.list tr, table.list tr th, table.list tr td {
+        border-style:solid
+    }
+    
+    table.list tr th {
+        background-color: #3399cc;
+        text-align: center;
+        min-width: 120px
+    }
+    
+    table.list tr td {
+        padding-left :10px;
+        padding-right :10px;
+    }
+</style>
+
+<div>サンプルデータ一覧</div>
+<table class="list">
+    <tr>
+        <th>id</th>
+        <th>text</th>
+        <th>num</th>
+    </tr>
+<?php foreach($models as $model): ?>
+    <tr>
+        <td><?php echo $model->getId(); ?></td>
+        <td><?php echo $model->getExtText(); ?></td>
+        <td><?php echo $model->getExtNum(); ?></td>
+    </tr>
+<?php endforeach; ?>
+</table>
+
+<div style="padding-top:30px;">データ新規追加</div>
+
+<form method="post" action='<?php echo $this->getActionUrl(); ?>'>
+    <table>
+        <tr>
+            <th>テキスト</th>
+            <td><input type="text" name="ext_text"></td>
+        </tr>
+        <tr>
+            <th>数値</th>
+            <td><input type="nunber" name="ext_num"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <button type="submit">データを送信</button>
+            </td>
+        </tr>
+    </table>
+</form>

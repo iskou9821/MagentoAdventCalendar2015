@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Advent2015_Thirdext>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Advent2015_Thirdext>
+    </modules>
+</config>
